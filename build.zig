@@ -16,6 +16,7 @@ pub fn build(b: *std.build.Builder) void {
         "-Wextra",
         "-Werror",
     });
+    exe.linkSystemLibrary("c");
     exe.linkSystemLibrary("libwebsockets");
     exe.setTarget(target);
     exe.setBuildMode(mode);
