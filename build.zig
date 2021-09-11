@@ -16,6 +16,9 @@ pub fn build(b: *std.build.Builder) void {
         "-Wextra",
         "-Werror",
     });
+
+    exe.addIncludeDir("src");
+
     exe.linkSystemLibrary("c");
     exe.linkSystemLibrary("libwebsockets");
     exe.setTarget(target);
